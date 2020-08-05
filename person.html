@@ -62,7 +62,7 @@
 				</li>
 			</ul>
 
-			<a class="btn btn-primary" href="login.html">Sign in</a>
+			<a class="btn btn-primary" href="login.html">Logout</a>
 		</div>
 	</nav>
 
@@ -132,8 +132,108 @@
 							</ul>
 
 							<div class="tab-content" id="pills-tabContent">
-								<div class="tab-pane fade show active" id="pills-basic" role="tabpanel" aria-labelledby="pills-basic-tab">
-									Basic
+								<div class="tab-pane fade show active border m-3 p-4" id="pills-basic" role="tabpanel" aria-labelledby="pills-basic-tab">
+									<form action="dashboard.html" method="POST">
+										<div class="row">
+											<div class="col-sm-3">
+												PersonType
+												<select name="persontype" id="persontype" class="form-control" autofocus>
+													<option value="0">Select...</option>
+												</select>
+											</div>
+											<div class="col-sm-3">
+												First Name
+												<input type="text" name="firstname" id="firstname" class="form-control" placeholder="First Name" required>
+											</div>
+											<div class="col-sm-3">
+												Middle Name
+												<input type="text" name="middlename" id="middlename" class="form-control" placeholder="Middle Name">
+											</div>
+											<div class="col-sm-3">
+												Last Name
+												<input type="text" name="lastname" id="lastname" class="form-control" required>
+											</div>
+										</div>
+
+										<div class="row mt-3">
+											<div class="col-sm-3">
+												Birth Date
+												<input type="date" name="birthdate" id="birthdate" class="form-control">
+											</div>
+											<div class="col-sm-3">
+												Birth Location
+												<input type="text" id="birthlocation" name="birthlocation" class="form-control">
+											</div>
+											<div class="col-sm-3">
+												Additional Info
+												<textarea name="longtext" id="longtext" rows="3" class="form-control"></textarea>
+											</div>
+											<div class="col-sm-3">
+												Keywords
+												<textarea name="keywords" id="keywords" rows="3" class="form-control"></textarea>
+											</div>
+										</div>
+										
+										<div class="row mt-3">
+											<div class="col-sm-3">
+												Is Worker
+												<select name="isworker" id="isworker" class="form-control" required title="This will help while assigning roles in work.">
+													<option value="0">Select...</option>
+													<option value="2" selected>No</option>
+													<option value="1">Yes</option>
+												</select>
+											</div>
+											<div class="col-sm-3">
+												Work Frequency
+												<select name="workfrequency" id="workfrequency" class="form-control" required>
+													<option value="0">Select...</option>
+													<option value="1">Daily</option>
+													<option value="2">Weekly</option>
+													<option value="3">Monthly</option>
+												</select>
+											</div>
+											<div class="col-sm-3">
+												Joining Date
+												<input type="date" name="joiningdate" id="joiningdate" class="form-control">
+											</div>
+											<div class="col-sm-3">
+												Joined As
+												<select name="joinedas" id="joinedas" class="form-control" required>
+													<option value="0">Select...</option>
+													<option value="1">Wardhak</option>
+													<option value="2">Teacher</option>
+													<option value="3">Dhol Tasha</option>
+												</select>
+											</div>
+										</div>
+
+										<div class="row mt-3">
+											<div class="col-sm-3">
+												Citizen Of
+												<select name="nationality" id="nationality" class="form-control">
+													<option value="0">Select...</option>
+													<option value="1">India</option>
+												</select>
+											</div>
+											<div class="col-sm-3">
+												Is Alive
+												<select name="isalive" id="isalive" class="form-control" required>
+													<option value="0">Select...</option>
+													<option value="1" selected>Yes</option>
+													<option value="2">No</option>
+												</select>
+											</div>
+											<div class="col-sm-3">
+												Date of Expiry
+												<input type="date" name="dateofexpiry" id="dateofexpiry" class="form-control">
+											</div>
+										</div>
+
+										<div class="row mt-4">
+											<button class="btn btn-primary m-1" type="submit">Save</button>
+											<button class="btn btn-warning m-1" type="reset">Cancel</button>
+										</div>
+									</form>
 								</div>
 								<div class="tab-pane fade" id="pills-address" role="tabpanel" aria-labelledby="pills-address-tab">
 									Address
