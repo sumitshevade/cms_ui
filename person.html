@@ -29,7 +29,7 @@
 		}
 	</style>
 	<!-- Custom styles for this template -->
-	<link href="styles.css" rel="stylesheet">
+	<link href="./css/styles.css" rel="stylesheet">
 </head>
 
 <body>
@@ -43,15 +43,20 @@
 		<div class="collapse navbar-collapse" id="navbarsExampleDefault">
 			<ul class="navbar-nav mr-auto">
 				<li class="nav-item">
-					<a class="nav-link" href="dashboard.html">Home</a>
+					<a class="nav-link" href="dashboard.html">Home <span class="sr-only">(current)</span></a>
 				</li>
-				<li class="nav-item active">
-					<a class="nav-link" href="#">Person <span class="sr-only">(current)</span></a>
+				<li class="nav-item active dropdown">
+					<a class="nav-link dropdown-toggle" href="#" id="dropdown1" data-toggle="dropdown"
+						aria-haspopup="true" aria-expanded="false">Person</a>
+					<div class="dropdown-menu" aria-labelledby="dropdown1">
+						<a class="dropdown-item active" href="person.html">Add New</a>
+						<a class="dropdown-item" href="#">Search</a>
+					</div>
 				</li>
 				<li class="nav-item dropdown">
-					<a class="nav-link dropdown-toggle" href="#" id="dropdown01" data-toggle="dropdown"
+					<a class="nav-link dropdown-toggle" href="#" id="dropdown2" data-toggle="dropdown"
 						aria-haspopup="true" aria-expanded="false">Master</a>
-					<div class="dropdown-menu" aria-labelledby="dropdown01">
+					<div class="dropdown-menu" aria-labelledby="dropdown2">
 						<a class="dropdown-item" href="#">Joined As</a>
 						<a class="dropdown-item" href="#">Country</a>
 						<a class="dropdown-item" href="#">School</a>
@@ -61,7 +66,7 @@
 					<a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true">Program</a>
 				</li>
 			</ul>
-
+			
 			<a class="btn btn-primary" href="login.html">Logout</a>
 		</div>
 	</nav>
@@ -136,7 +141,7 @@
 									<form action="dashboard.html" method="POST">
 										<div class="row">
 											<div class="col-sm-3">
-												PersonType
+												Current Role
 												<select name="persontype" id="persontype" class="form-control" autofocus>
 													<option value="0">Select...</option>
 												</select>
@@ -270,8 +275,8 @@
 									</table>
 								</div>
 								<div class="tab-pane fade border m-3 p-4" id="pills-contact" role="tabpanel" aria-labelledby="pills-contact-tab">
-									<button type="button" class="btn btn-success">+ Add Contact</button>
-									<form action="dashboard.html" method="POST">
+									<button type="button" class="btn btn-success" id="addContact">+ Add Contact</button>
+									<form action="dashboard.html" method="POST" id="contactForm">
 										<div class="mt-1 border p-3">
 											<div class="row">
 												<div class="col-sm-3">
@@ -301,8 +306,8 @@
 
 											<div class="row mt-4">
 												<div class="col-sm-3">
-													<button class="btn btn-primary" type="submit">Save</button>
-													<button class="btn btn-warning m-1" type="reset">Cancel</button>
+													<button id="saveContact" class="btn btn-primary" type="submit">Save</button>
+													<button id="cancelContact" class="btn btn-warning m-1" type="reset">Cancel</button>
 												</div>
 											</div>
 										</div>
@@ -703,13 +708,14 @@
 				</div>
 			</div>
 		</div>
-	</main><!-- /.container -->
+	</main>
 
 	<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
 		integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
 		crossorigin="anonymous"></script>
 	<script>window.jQuery || document.write('<script src="./js/vendor/jquery.slim.min.js"><\/script>')</script>
 	<script src="./js/bootstrap.bundle.js"></script>
+	<script src="./js/custom-js.js"></script>
 </body>
 
 </html>
