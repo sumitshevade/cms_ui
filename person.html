@@ -49,17 +49,24 @@
 					<a class="nav-link dropdown-toggle" href="#" id="dropdown1" data-toggle="dropdown"
 						aria-haspopup="true" aria-expanded="false">Person</a>
 					<div class="dropdown-menu" aria-labelledby="dropdown1">
-						<a class="dropdown-item active" href="person.html">Add New</a>
-						<a class="dropdown-item" href="#">Search</a>
+						<a class="dropdown-item active" href="#">Add New</a>
+						<a class="dropdown-item" href="searchperson.html">Search</a>
 					</div>
 				</li>
 				<li class="nav-item dropdown">
 					<a class="nav-link dropdown-toggle" href="#" id="dropdown2" data-toggle="dropdown"
 						aria-haspopup="true" aria-expanded="false">Master</a>
 					<div class="dropdown-menu" aria-labelledby="dropdown2">
-						<a class="dropdown-item" href="#">Joined As</a>
-						<a class="dropdown-item" href="#">Country</a>
+						<a class="dropdown-item" href="country.html">Country</a>
+						<a class="dropdown-item" href="#">State</a>
+						<a class="dropdown-item" href="#">City</a>
+						<a class="dropdown-item" href="#">District</a>
+						<a class="dropdown-item" href="#">Taluka</a>
+						<a class="dropdown-item" href="#">Department</a>
+						<a class="dropdown-item" href="#">Division</a>
+						<a class="dropdown-item" href="#">University</a>
 						<a class="dropdown-item" href="#">School</a>
+						<a class="dropdown-item" href="othermaster.html">Other</a>
 					</div>
 				</li>
 				<li class="nav-item">
@@ -87,12 +94,12 @@
 									role="tab" aria-controls="pills-home" aria-selected="true">Basic</a>
 								</li>
 								<li class="nav-item">
-									<a class="nav-link" id="pills-address-tab" data-toggle="pill" href="#pills-address"
-									role="tab" aria-controls="pills-address" aria-selected="false">Address</a>
-								</li>
-								<li class="nav-item">
 									<a class="nav-link" id="pills-contact-tab" data-toggle="pill" href="#pills-contact"
 									role="tab" aria-controls="pills-contact" aria-selected="false">Contact</a>
+								</li>
+								<li class="nav-item">
+									<a class="nav-link" id="pills-address-tab" data-toggle="pill" href="#pills-address"
+									role="tab" aria-controls="pills-address" aria-selected="false">Address</a>
 								</li>
 								<li class="nav-item">
 									<a class="nav-link" id="pills-education-tab" data-toggle="pill" href="#pills-education"
@@ -242,38 +249,6 @@
 										</div>
 									</form>
 								</div>
-								<div class="tab-pane fade border m-3 p-4" id="pills-address" role="tabpanel" aria-labelledby="pills-address-tab">
-									<button type="button" class="btn btn-success">+ Add Address</button>
-									<table class="table table-hover mt-2">
-										<thead>
-											<tr>
-												<th scope="col">#</th>
-												<th scope="col">First</th>
-												<th scope="col">Last</th>
-												<th scope="col">Handle</th>
-											</tr>
-										</thead>
-										<tbody>
-											<tr>
-												<th scope="row">1</th>
-												<td>Mark</td>
-												<td>Otto</td>
-												<td>@mdo</td>
-											</tr>
-											<tr>
-												<th scope="row">2</th>
-												<td>Jacob</td>
-												<td>Thornton</td>
-												<td>@fat</td>
-											</tr>
-											<tr>
-												<th scope="row">3</th>
-												<td colspan="2">Larry the Bird</td>
-												<td>@twitter</td>
-											</tr>
-										</tbody>
-									</table>
-								</div>
 								<div class="tab-pane fade border m-3 p-4" id="pills-contact" role="tabpanel" aria-labelledby="pills-contact-tab">
 									<button type="button" class="btn btn-success" id="addContact">+ Add Contact</button>
 									<form action="dashboard.html" method="POST" id="contactForm">
@@ -314,6 +289,38 @@
 									</form>
 
 									<table class="table table-hover mt-5">
+										<thead>
+											<tr>
+												<th scope="col">#</th>
+												<th scope="col">First</th>
+												<th scope="col">Last</th>
+												<th scope="col">Handle</th>
+											</tr>
+										</thead>
+										<tbody>
+											<tr>
+												<th scope="row">1</th>
+												<td>Mark</td>
+												<td>Otto</td>
+												<td>@mdo</td>
+											</tr>
+											<tr>
+												<th scope="row">2</th>
+												<td>Jacob</td>
+												<td>Thornton</td>
+												<td>@fat</td>
+											</tr>
+											<tr>
+												<th scope="row">3</th>
+												<td colspan="2">Larry the Bird</td>
+												<td>@twitter</td>
+											</tr>
+										</tbody>
+									</table>
+								</div>
+								<div class="tab-pane fade border m-3 p-4" id="pills-address" role="tabpanel" aria-labelledby="pills-address-tab">
+									<button type="button" class="btn btn-success">+ Add Address</button>
+									<table class="table table-hover mt-2">
 										<thead>
 											<tr>
 												<th scope="col">#</th>

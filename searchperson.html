@@ -1,0 +1,201 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+	<meta name="description" content="">
+	<title>Person</title>
+
+	<link rel="canonical" href="#">
+
+	<!-- Bootstrap core CSS -->
+	<link href="./css/bootstrap.css" rel="stylesheet">
+
+	<style>
+		.bd-placeholder-img {
+			font-size: 1.125rem;
+			text-anchor: middle;
+			-webkit-user-select: none;
+			-moz-user-select: none;
+			-ms-user-select: none;
+			user-select: none;
+		}
+
+		@media (min-width: 768px) {
+			.bd-placeholder-img-lg {
+				font-size: 3.5rem;
+			}
+		}
+	</style>
+	<!-- Custom styles for this template -->
+	<link href="./css/styles.css" rel="stylesheet">
+</head>
+
+<body>
+	<nav class="navbar navbar-expand-md navbar-dark bg-primary fixed-top">
+		<a class="navbar-brand" href="#">PublicData</a>
+		<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarsExampleDefault"
+			aria-controls="navbarsExampleDefault" aria-expanded="false" aria-label="Toggle navigation">
+			<span class="navbar-toggler-icon"></span>
+		</button>
+
+		<div class="collapse navbar-collapse" id="navbarsExampleDefault">
+			<ul class="navbar-nav mr-auto">
+				<li class="nav-item">
+					<a class="nav-link" href="dashboard.html">Home <span class="sr-only">(current)</span></a>
+				</li>
+				<li class="nav-item active dropdown">
+					<a class="nav-link dropdown-toggle" href="#" id="dropdown1" data-toggle="dropdown"
+						aria-haspopup="true" aria-expanded="false">Person</a>
+					<div class="dropdown-menu" aria-labelledby="dropdown1">
+						<a class="dropdown-item" href="person.html">Add New</a>
+						<a class="dropdown-item active" href="#">Search</a>
+					</div>
+				</li>
+				<li class="nav-item dropdown">
+					<a class="nav-link dropdown-toggle" href="#" id="dropdown2" data-toggle="dropdown"
+						aria-haspopup="true" aria-expanded="false">Master</a>
+					<div class="dropdown-menu" aria-labelledby="dropdown2">
+						<a class="dropdown-item" href="country.html">Country</a>
+						<a class="dropdown-item" href="#">State</a>
+						<a class="dropdown-item" href="#">City</a>
+						<a class="dropdown-item" href="#">District</a>
+						<a class="dropdown-item" href="#">Taluka</a>
+						<a class="dropdown-item" href="#">Department</a>
+						<a class="dropdown-item" href="#">Division</a>
+						<a class="dropdown-item" href="#">University</a>
+						<a class="dropdown-item" href="#">School</a>
+						<a class="dropdown-item" href="othermaster.html">Other</a>
+					</div>
+				</li>
+				<li class="nav-item">
+					<a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true">Program</a>
+				</li>
+			</ul>
+			
+			<a class="btn btn-primary" href="login.html">Logout</a>
+		</div>
+	</nav>
+
+	<main role="main" class="container-fluid">
+		<div class="row">
+			<div class="col-sm-12">
+				<div class="card-deck mb-3 text-left">
+					<div class="card mb-4 shadow-sm">
+						<div class="card-header">
+							<h4 class="my-0 font-weight-normal">Search Person</h4>
+						</div>
+
+						<div class="card-body">
+							<form action="dashboard.html" method="POST">
+								<div class="row">
+									<div class="col-sm-3">
+										Current Role
+										<select name="persontype" id="persontype" class="form-control" autofocus>
+											<option value="0">Select...</option>
+										</select>
+									</div>
+									<div class="col-sm-3">
+										First Name
+										<input type="text" name="firstname" id="firstname" class="form-control" placeholder="First Name" required>
+									</div>
+									<div class="col-sm-3">
+										Middle Name
+										<input type="text" name="middlename" id="middlename" class="form-control" placeholder="Middle Name">
+									</div>
+									<div class="col-sm-3">
+										Last Name
+										<input type="text" name="lastname" id="lastname" class="form-control" required>
+									</div>
+								</div>
+
+								<div class="row mt-3">
+									<div class="col-sm-3">
+										Birth Location
+										<input type="text" id="birthlocation" name="birthlocation" class="form-control">
+									</div>
+									<div class="col-sm-3">
+										Citizen Of
+										<select name="nationality" id="nationality" class="form-control">
+											<option value="0">Select...</option>
+											<option value="1">India</option>
+										</select>
+									</div>
+									<div class="col-sm-3">
+										Additional Info
+										<textarea name="longtext" id="longtext" rows="3" class="form-control"></textarea>
+									</div>
+									<div class="col-sm-3">
+										Keywords
+										<textarea name="keywords" id="keywords" rows="3" class="form-control"></textarea>
+									</div>
+								</div>
+								
+								<div class="row mt-3">
+									<div class="col-sm-3">
+										Is Worker
+										<select name="isworker" id="isworker" class="form-control" required title="This will help while assigning roles in work.">
+											<option value="0">Select...</option>
+											<option value="2" selected>No</option>
+											<option value="1">Yes</option>
+										</select>
+									</div>
+									<div class="col-sm-3">
+										Work Frequency
+										<select name="workfrequency" id="workfrequency" class="form-control" required>
+											<option value="0">Select...</option>
+											<option value="1">Daily</option>
+											<option value="2">Weekly</option>
+											<option value="3">Monthly</option>
+										</select>
+									</div>
+									<div class="col-sm-3">
+										Joining Date
+										<input type="date" name="joiningdate" id="joiningdate" class="form-control">
+									</div>
+									<div class="col-sm-3">
+										Joined As
+										<select name="joinedas" id="joinedas" class="form-control" required>
+											<option value="0">Select...</option>
+											<option value="1">Wardhak</option>
+											<option value="2">Teacher</option>
+											<option value="3">Dhol Tasha</option>
+										</select>
+									</div>
+								</div>
+
+								<div class="row mt-3">
+									<div class="col-sm-3">
+										Is Alive
+										<select name="isalive" id="isalive" class="form-control" required>
+											<option value="0">Select...</option>
+											<option value="1" selected>Yes</option>
+											<option value="2">No</option>
+										</select>
+									</div>
+								</div>
+
+								<div class="row mt-4">
+									<div class="col-sm-3">
+										<button class="btn btn-primary" type="submit">Search</button>
+										<button class="btn btn-warning m-1" type="reset">Cancel</button>
+									</div>
+								</div>
+							</form>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</main>
+
+	<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+		integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+		crossorigin="anonymous"></script>
+	<script>window.jQuery || document.write('<script src="./js/vendor/jquery.slim.min.js"><\/script>')</script>
+	<script src="./js/bootstrap.bundle.js"></script>
+	<script src="./js/custom-js.js"></script>
+</body>
+
+</html>
